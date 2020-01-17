@@ -52,6 +52,57 @@ var json = {
             ]
         },
         {
+            questions: [
+                {
+                    type: "radiogroup",
+                    name: "jquery",
+                    title: "What is jQuery?",
+                    choicesOrder: "random",
+                    choices: [
+                        "A JavaScript library designed to simplify HTML DOM tree traversal and manipulation, as well as event handling, CSS animation, and Ajax",
+                        "A style sheet language used for describing the presentation of a document written in a markup language like HTML",
+                        "A high-level, just-in-time compiled, object-oriented programming language that conforms to the ECMAScript specification.",
+                        "I dont know...do you..?",
+                    ],
+                    correctAnswer: "A JavaScript library designed to simplify HTML DOM tree traversal and manipulation, as well as event handling, CSS animation, and Ajax"
+                }
+            ]
+        },
+        {
+            questions: [
+                {
+                    type: "radiogroup",
+                    name: "selector",
+                    title: "How do you start a jQuery selector?",
+                    choicesOrder: "random",
+                    choices: [
+                        "$",
+                        "---->",
+                        ":)",
+                        "<href>"
+                    ],
+                    correctAnswer: "$"
+                }
+            ]
+        },
+        {
+            questions: [
+                {
+                    type: "radiogroup",
+                    name: "H T M L",
+                    title: "What does HTML stand for?",
+                    choicesOrder: "random",
+                    choices: [
+                        "Hypertext Markup Launguage",
+                        "Hypertext Mega Language",
+                        "Hotkey Text Mark Language",
+                        "Hotdog Markup Language"
+                    ],
+                    correctAnswer: "Hypertext Markup Launguage"
+                }
+            ]
+        },
+        {
             maxTimeToFinish: 15,
             questions: [
                 {
