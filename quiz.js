@@ -1,3 +1,7 @@
+// I decided to use JSON to convert my javascript objects and to store and grab data
+
+
+// applies the style to the page
 Survey.StylesManager.applyTheme("modern");
 
 var json = {
@@ -8,8 +12,12 @@ var json = {
     maxTimeToFinish: 60,
     firstPageIsStarted: true,
     startSurveyText: "Start Quiz",
+
+// questions will start here
+
     pages: [
         {
+// This page will be the starting point for the quiz. It will also hold the start quiz button.
             questions: [
                 {
                     type: "html",
@@ -18,6 +26,7 @@ var json = {
                 }
             ]
         },
+// Question 1
         {
             questions: [
                 {
@@ -34,6 +43,7 @@ var json = {
                 }
             ]
         },
+// Question 2
         {
             questions: [
                 {
@@ -51,6 +61,7 @@ var json = {
                 }
             ]
         },
+//Question 3
         {
             questions: [
                 {
@@ -68,6 +79,7 @@ var json = {
                 }
             ]
         },
+// Question 4
         {
             questions: [
                 {
@@ -85,6 +97,7 @@ var json = {
                 }
             ]
         },
+// Question 5
         {
             questions: [
                 {
@@ -102,6 +115,7 @@ var json = {
                 }
             ]
         },
+//Question 6
         {
             maxTimeToFinish: 15,
             questions: [
@@ -122,10 +136,12 @@ var json = {
             ]
         }
     ],
+//Final page.. Will show which answers were answered correctly.
     completedHtml:
         "<h4>You have answered correctly <b>{correctedAnswers}</b> questions from <b>{questionCount}</b>.</h4>"
 };
 
+//This function uses JSON to grab the result data from your quiz so it knows what to display
 window.survey = new Survey.Model(json);
 
 survey.onComplete.add(function(result) {
@@ -134,3 +150,5 @@ survey.onComplete.add(function(result) {
 });
 
 $("#surveyElement").Survey({ model: survey });
+
+

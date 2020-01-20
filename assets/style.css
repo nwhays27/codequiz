@@ -1,0 +1,15 @@
+#surveyElement {
+    background-color: lightgray;
+    height: 1000px;
+    border-radius: 30px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+#surveyResult {
+    font-size: larger;
+    font-weight: bold;
+    line-height: 30px;
+}
