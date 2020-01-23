@@ -136,12 +136,13 @@ var json = {
             ]
         }
     ],
-//Final page.. Will show which answers were answered correctly.
+//Final page.. Will show how many answers were correctly answered.
     completedHtml:
+
         "<h4>You have answered correctly <b>{correctedAnswers}</b> questions from <b>{questionCount}</b>.</h4>"
 };
 
-//This function uses JSON to grab the result data from your quiz so it knows what to display
+//This function uses JSON to grab the result data from your quiz and displays your answers at the bottom of the fianl page
 window.survey = new Survey.Model(json);
 
 survey.onComplete.add(function(result) {
@@ -149,6 +150,7 @@ survey.onComplete.add(function(result) {
         "Result JSON:\n" + JSON.stringify(result.data, null, 3);
 });
 
+//This initializes the survey
 $("#surveyElement").Survey({ model: survey });
 
 

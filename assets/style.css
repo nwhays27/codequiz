@@ -1,7 +1,7 @@
 #surveyElement {
     background-color: lightgray;
-    height: 1000px;
-    border-radius: 30px;
+    height: 700px;
+    border-radius: 50px;
     margin-top: 50px;
     margin-bottom: 50px;
     margin-left: 50px;
@@ -9,7 +9,9 @@
 }
 
 #surveyResult {
-    font-size: larger;
-    font-weight: bold;
-    line-height: 30px;
+ opacity: 0.5;
+}
+
+title {
+    color: purple;
 }
