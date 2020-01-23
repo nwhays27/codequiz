@@ -4,7 +4,7 @@
 // applies the style to the page
 Survey.StylesManager.applyTheme("modern");
 
-var json = {
+var codeQuiz = {
     title: "Code Quiz",
     showProgressBar: "bottom",
     showTimerPanel: "top",
@@ -142,9 +142,10 @@ var json = {
         "<h4>You have answered correctly <b>{correctedAnswers}</b> questions from <b>{questionCount}</b>.</h4>"
 };
 
-//This function uses JSON to grab the result data from your quiz and displays your answers at the bottom of the fianl page
-window.survey = new Survey.Model(json);
 
+window.survey = new Survey.Model(codeQuiz);
+
+//This function uses JSON to grab the result data from your quiz and displays your answers at the bottom of the final page
 survey.onComplete.add(function(result) {
     document.querySelector("#surveyResult").textContent =
         "Result JSON:\n" + JSON.stringify(result.data, null, 3);
